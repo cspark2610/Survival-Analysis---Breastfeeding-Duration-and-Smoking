@@ -51,7 +51,7 @@ Due to having earlier differences for survival, two-group comparisons were condu
 Stepwise regression was conducted to select predictors of interest for the adjusted Cox PH model. As shown in Table 1, the predictors that were selected for the adjusted model were birthyr, smoke, race, educ, and poverty, while age was forced into the model which was not statistically significant. Forward selection was used to keep statistically significant predictors. Efron’s approximation was used due to overcome the large number of ties and tends to yield better estimates than the Breslow method. 
 
 ### Table 1. Stepwise Regression to Select Covariates For Adjusted Cox PH Model
-![alt text](https://github.com/cspark2610/Survival-Analysis---Breastfeeding-Duration-and-Smoking/blob/master/images/table_1.jpg)
+![alt text](https://github.com/cspark2610/Survival-Analysis---Breastfeeding-Duration-and-Smoking/blob/master/images/table_1.JPG)
 
 Loglikelihood ratio and AIC tests were used to assess model fit. The unadjusted model presented an AIC of 10375.05 while the adjusted model presented an AIC of 10349.98. Additionally, the loglikelihood ratios differed by 35.2. The adjusted model produced lower AIC values, therefore, it is indicated that the adjusted model is a better model for prediction than the unadjusted model for smoking.
 
