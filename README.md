@@ -50,58 +50,8 @@ Due to having earlier differences for survival, two-group comparisons were condu
 ## Model Selection
 Stepwise regression was conducted to select predictors of interest for the adjusted Cox PH model. As shown in Table 1, the predictors that were selected for the adjusted model were birthyr, smoke, race, educ, and poverty, while age was forced into the model which was not statistically significant. Forward selection was used to keep statistically significant predictors. Efron’s approximation was used due to overcome the large number of ties and tends to yield better estimates than the Breslow method. 
 
-Table 1. Stepwise Regression to Select Covariates For Adjusted Cox PH Model
-Step	Predictors	HR (95% CI)	P-value
-1			
-	Age	0.9937 
-(0.969-1.02)	0.632
-2			
-	Age	0.9587 
-(0.929-0.989)	0.008
-	Birthyr	1.0836
-(1.042-1.128)	<0.001
-3			
-	Age	0.9628
-(0.933-0.993)	0.017
-	Birthyr	1.083
-(1.041-1.127)	<0.001
-	Smoke	1.2505
-(1.081-1.45)	0.003
-4			
-	Age	0.9702
-(0.9402-1.001)	0.060
-	Birthyr	1.0804 
-(1.038-1.124)	<0.001
-	Smoke	1.3232
-(1.139-1.537)	<0.001
-	Race	1.1668
-(1.066-1.277)	<0.001
-5			
-	Age	0.9884
-(0.953-1.025)	0.530
-	Birthyr	1.0809
-(1.0387-1.125)	<0.001
-	Smoke	1.2787
-(1.096-1.49)	0.002
-	Race	1.1511
-(1.05-1.261)	0.003
-	Educ	0.9581
-(0.917-1.001)	0.054
-6			
-	Age	0.9841
-(0.949-1.02)	0.389
-	Birthyr	1.0823
-(1.04-1.13)	<0.001
-	Smoke	1.2956
-(1.11-1.51)	<0.001
-	Race	1.1631
-(1.06-1.27)	0.001
-	Educ	0.9482
-(0.907-0.992)	0.020
-	Poverty	0.8127
-(0.678-0.975)	0.025
-HR = Hazards ratio
-CI = Confidence interval
+### Table 1. Stepwise Regression to Select Covariates For Adjusted Cox PH Model
+![alt text](https://github.com/cspark2610/Survival-Analysis---Breastfeeding-Duration-and-Smoking/blob/master/images/table_1.jpg)
 
 Loglikelihood ratio and AIC tests were used to assess model fit. The unadjusted model presented an AIC of 10375.05 while the adjusted model presented an AIC of 10349.98. Additionally, the loglikelihood ratios differed by 35.2. The adjusted model produced lower AIC values, therefore, it is indicated that the adjusted model is a better model for prediction than the unadjusted model for smoking.
 
