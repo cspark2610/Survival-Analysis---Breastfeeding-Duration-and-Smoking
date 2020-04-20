@@ -40,8 +40,8 @@ Density plots and histograms were produced for continuous and factor variables, 
 
 ## Descriptive Survival Analyses
 Survival function estimates were conducted using Kaplan-Meier, which were plotted. The plots indicate that number of events or failures occur early into the study, as shown in Figure 1. In addition, it is apparent from the plot that, on average, mothers’ who had smoked during pregnancy had a lower survival probability compared to mothers’ who had not. Moreover, early into the study there is evidence of several crossovers between the two groups survival probability, but begins to increase the gap between 20 and 50 weeks, roughly. 
-Figure 1. Kaplan-Meier Survival Plot of Mothers who did or did not engage in smoking during pregnancy.
- 
+
+### Figure 1. Kaplan-Meier Survival Plot of Mothers who did or did not engage in smoking during pregnancy. 
 ![alt text](https://github.com/cspark2610/Survival-Analysis---Breastfeeding-Duration-and-Smoking/blob/master/images/figure_1.png)
 
 ## Two-Group Comparison – Gehan’s Wilcoxon Test
