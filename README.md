@@ -50,39 +50,23 @@ Due to having earlier differences for survival, two-group comparisons were condu
 ## Model Selection
 Stepwise regression was conducted to select predictors of interest for the adjusted Cox PH model. As shown in Table 1, the predictors that were selected for the adjusted model were birthyr, smoke, race, educ, and poverty, while age was forced into the model which was not statistically significant. Forward selection was used to keep statistically significant predictors. Efron’s approximation was used due to overcome the large number of ties and tends to yield better estimates than the Breslow method. 
 
-### Table 1. Stepwise Regression to Select Covariates For Adjusted Cox PH Model
 ![alt text](https://github.com/cspark2610/Survival-Analysis---Breastfeeding-Duration-and-Smoking/blob/master/images/table_1.JPG)
+![alt text](https://github.com/cspark2610/Survival-Analysis---Breastfeeding-Duration-and-Smoking/blob/master/images/table_1_2.JPG)
 
 Loglikelihood ratio and AIC tests were used to assess model fit. The unadjusted model presented an AIC of 10375.05 while the adjusted model presented an AIC of 10349.98. Additionally, the loglikelihood ratios differed by 35.2. The adjusted model produced lower AIC values, therefore, it is indicated that the adjusted model is a better model for prediction than the unadjusted model for smoking.
 
 ## Evaluating Linearity of Age Effects
 Adjusted Cox-PH models were conducted for each transformed age predictor. Likelihood ratio and AIC values were calculated to evaluate the best parameterization of age for prediction. The values were very similar across both likelihood ratios and AIC, as shown in Table 2. However, the cubic transformation of age presented the lowest AIC and lower loglikelihood ratio values than linear and quadratic transformations of age. 
-Table 2. Loglikelihood and AIC of Age Transformations
-Age Transformations	AIC	-2LogL
-Continuous	10351.87	10337.87
-Square Root	10351.80	10343.08
-Ordinal	10352.50	10342.71
-Categorical	10353.90	10343.48
-Linear, Quad	10353.41	10342.94
-Linear, Quad, Cubic	10350.42	10337.57
-AIC = Akaike Information Criteria
--2LogL = -2*Log(Likelihood)
+
+![alt text](https://github.com/cspark2610/Survival-Analysis---Breastfeeding-Duration-and-Smoking/blob/master/images/table_2.JPG)
+![alt text](https://github.com/cspark2610/Survival-Analysis---Breastfeeding-Duration-and-Smoking/blob/master/images/table_2_2.JPG)
+
 
 ## Final Cox PH Adjusted Model
 The final adjusted Cox PH model included smoke, age_cubic, age_quad, age, birthyr, race, educ, and poverty. The final output is displayed in Table 3. 
-Table 3. Final Adjusted Cox Proportional Hazards Model for Length of Breastfeeding
-Predictors	Coef	HR	SE	P-value
-Smoke1	0.261467	1.298834	0.078599	<0.001
-Age_cubic	-0.002695	0.9973	0.001211	0.0260
-Age_quad	0.176725	1.193303	0.077872	0.0232
-Age	-3.835703	0.021586	1.655725	0.021
-Birthyr	0.079704	1.082966	0.020499	<0.001
-Race2	0.183424	1.201324	0.105077	0.081
-Race3	0.309610	1.362893	0.097371	0.001
-Educ	-0.049653	0.951560	0.023154	0.032
-Poverty1	-0.209925	0.810645	0.093906	0.025
-HR = Hazards ratio
-SE = Standard Error
+
+![alt text](https://github.com/cspark2610/Survival-Analysis---Breastfeeding-Duration-and-Smoking/blob/master/images/table_3.JPG)
+
 
 As shown in Table 3, all predictors were statistically significant (alpha <0.05), with the exception of being black (race2). The overall Cox PH model was statistically significant at p-value < 0.001. Smoking while pregnant increased the hazard of whether breastfeeding was completed by 29.9%. A year increase in infant’s birthyear increased hazard by 8.3%. Compared to Whites, mothers from an “Other” race were subject to a 36% increase in hazard. A year increase of mothers’ education was associated with a 5% decrease in hazard. Mothers who gave birth while in poverty was associated with a 19% decrease in hazard.
 Figure 2. Final Adjusted Survival Curve for Cox PH Model to estimate Breastfeeding for Mothers who Had or Had Not Smoked During Pregnancy  
@@ -90,22 +74,29 @@ After visualizing the adjusted survival curves for the final Cox PH Model, as sh
 
 ## Testing Proportional Hazards Assumption
 All Schoenfeld residual plots against time were not statistically significant with exception of educ (p =0.0363).  Therefore, the proportional hazards assumption does not mildly hold. However, from visualizing the residual plot for educ against time, the residuals are evenly spaced along the X-axis and the fitted line is horizontal throughout. Subsequently, Martingale residuals against time for the final adjusted Cox PH model was produced to investigate whether the assumption holds.
-Figure 3. Plots of Schoenfeld Residuals of Predictors Against Time
- 
 
-Figure 4. Martingale Residuals of All Predictors Against Time 	
- 
+### Figure 3. Plots of Schoenfeld Residuals of Predictors Against Time
+![alt text](https://github.com/cspark2610/Survival-Analysis---Breastfeeding-Duration-and-Smoking/blob/master/images/figure_3.png)
 
 
+### Figure 4. Martingale Residuals of All Predictors Against Time 	
+![alt text](https://github.com/cspark2610/Survival-Analysis---Breastfeeding-Duration-and-Smoking/blob/master/images/figure_4.png)
 
 
-Figure 5. Survival Plot and Log-Log Survival Plot Against Time for Breastfeeding and Smoke Status
+
+
+
+### Figure 5. Survival Plot and Log-Log Survival Plot Against Time for Breastfeeding and Smoke Status
+![alt text](https://github.com/cspark2610/Survival-Analysis---Breastfeeding-Duration-and-Smoking/blob/master/images/figure_5.png)
+
  
 Figure 4, depicts a horizontal fitted line within Martingale Residuals against time. Several outliers are salient, however, majority of the residuals are spread evenly across the X-axis,  akin to the Scaled Individual Schoenfeld residuals plot. Finally, a log-log survival curve against log of time was plotted and shown in Figure 5. The survival curves have a few crossovers in the beginning and end of the duration, however, with the exception of two crossovers in the middle time period, the hazards remained fairly proportional. 
 
 ## Sample Size Calculation for 80% Power 
 To obtain the sample size calculation for 80% statistical power, the following equation was used. 
- 
+
+![alt text](https://github.com/cspark2610/Survival-Analysis---Breastfeeding-Duration-and-Smoking/blob/master/images/cohens_d.JPG)
+
 d = required number of events
 z_1-α\/2 = 1.96
 z_(1-β) = 0.84 (for 80%)
