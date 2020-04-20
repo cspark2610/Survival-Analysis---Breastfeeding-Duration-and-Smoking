@@ -101,17 +101,21 @@ d = required number of events
 z_1-α\/2 = 1.96
 z_(1-β) = 0.84 (for 80%)
 ln(θ) = 1.254846
+
 d=(4(1.96+0.84)^2 )\/([ln(1.25486)]^2 )
 d = 608.5 = 609 events
+
 The sample size needed to have 80% power to detect observed hazard ratios for mothers who smoked or did not during pregnancy with a two-sided alpha of 0.05, requires 609 events. However, this come with a caveat, this only holds true if no censoring occurred throughout the study. Therefore, censoring needs to be accounted for survival analysis. 
 
 ## Conclusion
 Analyses were conducted, analyzed, and interpreted to help examine the factors that come into play with duration of breastfeeding. Kaplan-Meier estimator was performed and plotted for duration of breastfeeding and time by whether mothers’ did or did not smoke while pregnant. Confidence intervals were outlined through “log-log” method, since it delivered the most precise 95% confidence interval bands. It was apparent from the KM plot that majority of the events or failures occurred earlier on during the study; therefore, to test whether survival differences between groups were significant or not, Gehan’s-Wilcoxon test was used to predict statistical significance. Race, education, and smoking were predictors that were statistically significant from Wilcoxon test.
+
 Stepwise Regression was performed to select covariates for the final adjusted model. Age was forced into the stepwise regression, and at an alpha of 0.2 initial covariates were selected, then lastly, at an alpha of 0.1 covariates were selected to be included in final multivariate model. These covariates were birthyear, smoke, race, educ, poverty and age, which were all statistically significant, except for age, and improved model fit. Model fit were assessed using -2LogL and AIC values. The adjusted model showed improvement with having lower AIC and -2LogL values than the unadjusted model.
+
 To evaluate linearity of age effects, age was transformed into continuous, square root, categorical, ordinal, linear and quad, linear and quad and cubic. After, reviewing AIC and -2LogL values, it was concluded that age as linear, quad, and cubic form presented best model fit; therefore, the final adjusted Cox PH model included age as linear quad, and cubic. 
+
 The final adjusted Cox PH model found all predictors to be statistically significant, except for being Black. Education, poverty, and age in cubic and linear form decreased hazards of completing breastfeeding, while the other measures were associated with an increase in hazards. The final model was statistically significant at p-value <0.001. Mothers’ smoking status while pregnant or not, mothers’ race, mothers’ education, and mothers’ poverty status were found to be factors that are related to duration of breastfeeding. Age was only statistical significant when transformed to quad and cubic forms. So, age has a very low relationship with breastfeeding.
+
 To test whether the assumption of Proportional Hazards was met, scaled Schoenfeld’s Residuals over time were plotted for each predictor. Only education was found to be statistically significant, which would indicate that the assumption is not met, however, the visual plot of education residuals over time did not strongly highlight the significance. Therefore, Martingale’s Residuals for the fitted final Cox PH model was plotted against time, which supported the findings of the Schoenfeld’s Residuals plot. The fitted line was almost fully horizontal and residuals were evenly distributed across the horizontal Axis. Lastly, a log-log of the survival function over log time by smoking status was plotted to assess whether the lines were parallel or not. The lines were not parallel in the beginning and at the end of the study period, however, the middle portion was close to indicating proportional hazards. However, there is not enough of evidence to show that the assumption for proportional hazards was met.
+
 Sample size calculations were performed to have a power of 80% to detect hazard ratios for mothers who smoke or do not at a two-sided significance of 0.05. The final calculations led to the conclusion that, if no censoring occurs during the study, 609 events must occur to have 80% power.
-
-
-![alt text](https://github.com/cspark2610/cross-sectional-analysis-of-glycemic-status-assocaited-with
